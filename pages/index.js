@@ -9,6 +9,7 @@ export default class extends React.Component {
       const res = await axios.get('http://api.football-data.org/v1/competitions/426/leagueTable')
       return {data: res.data}
     } else {
+      console.log('xxxx');
       return {data: JSON.parse(sessionStorage.getItem('bpl'))}
     }
   }
@@ -20,7 +21,7 @@ export default class extends React.Component {
     const logoStyle = {
       width: '30px'
     }
-    
+
     return (
       <div>
         <Head>
@@ -32,7 +33,7 @@ export default class extends React.Component {
             <div className="pure-u-1-3"></div>
             <div className="pure-u-1-3">
               <h1>Barclays Premier League</h1>
-              
+
               <table className="pure-table">
                 <thead>
                   <tr>
